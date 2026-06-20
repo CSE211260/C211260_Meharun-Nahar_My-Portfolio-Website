@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+    }
+  </style>
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .gradient-text{
+      background: linear-gradient(to right,#38bdf8,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .project-card:hover{
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .nav-link::after{
+      content:'';
+      display:block;
+      width:0%;
+      height:2px;
+      background:#38bdf8;
+      transition:0.4s;
+    }
+
+    .nav-link:hover::after{
+      width:100%;
+    }
+   
+  <style>
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    overflow-x:hidden;
+  }
+
+  img{
+    max-width:100%;
+  }
+
+  .floating{
+    animation: floating 4s ease-in-out infinite;
+  }
+
+  @keyframes floating{
+
+    0%{
+      transform: translateY(0px);
+    }
+
+    50%{
+      transform: translateY(-20px);
+    }
+
+    100%{
+      transform: translateY(0px);
+    }
+
+  }
+
+
+ 
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass">
+
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+
+    <h1 class="text-2xl font-bold gradient-text">
+      My Portfolio
+    </h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-lg">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about me">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+   <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+      <ul class="flex flex-col gap-4">
+        <li><a href="#home">Home</a></li>
+       <li> <a href="#about me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+</nav>
+
+  <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-10 pt-12">
+
+  <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left -->
+    <div class="text-center md:text-left">
+
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
+        Hi, I'm
+        <span class="gradient-text">Meharun Nahar</span>
+      </h2>
+
+      <p class="mt-6 text-gray-300 text-base md:text-lg leading-relaxed">
+      I am a passionate frontend developer & programmer .I love creating
+        modern, responsive and interactive websites using
+        HTML, Tailwind CSS and JavaScript
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+
+        <a href="#projects"
+          class="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-full font-semibold transition">
+          View Projects
+        </a>
+
+        <a href="#contact"
+          class="border border-sky-500 px-6 py-3 rounded-full hover:bg-sky-500 transition">
+          Contact Me
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="flex justify-center">
+
+      <img
+        src="hijab-girl-animated.avif"
+        class="floating w-[260px] sm:w-[320px] md:w-[420px] max-w-full"
+        alt="Developer"
+      />
+
+    </div>
+
+  </div>
+</section>
+<section id="about me" class="py-10 px-6 bg-gradient-to-b from-slate-900 to-slate-950 ">
+
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-10" data-aos="fade-up">
+      
+      <h2 class="text-4xl md:text-4xl font-extrabold text-white leading-tight">
+
+        About
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+
+          Me
+
+        </span>
+
+      </h2>
+      <p class="text-gray-400 mt-3 text-sm md:text-base">
+        Get to know more about me, my skills and passion
+      </p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="glass rounded-3xl p-8 md:p-10 border border-white/10 shadow-2xl space-y-10"
+      data-aos="zoom-in">
+
+      <!-- Description -->
+      <p class="text-center text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+        I am Meharun Nahar. I love modern web design, programming and creative digital work.
+        This is my personal portfolio website where I showcase my skills and projects.
+      </p>
+
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <!-- Email -->
+        <div class="glass p-5 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+          <div class="text-sky-400 text-2xl mb-3">✉️</div>
+          <h4 class="font-semibold text-lg">Email</h4>
+          <p class="text-gray-400 text-sm break-all">meharunnahar2021@gmail.com</p>
+        </div>
+
+        <!-- Phone -->
+        <div class="glass p-5 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+          <div class="text-purple-400 text-2xl mb-3">📞</div>
+          <h4 class="font-semibold text-lg">Phone</h4>
+          <p class="text-gray-400 text-sm">+8801854254244</p>
+        </div>
+
+        <!-- Location -->
+        <div class="glass p-5 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+          <div class="text-pink-400 text-2xl mb-3">📍</div>
+          <h4 class="font-semibold text-lg">Location</h4>
+          <p class="text-gray-400 text-sm">Chattogram, Bangladesh</p>
+        </div>
+
+      </div>
+
+      <!-- Buttons (Professional CTA Row) -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+
+        <a href="cv.pdf" download
+          class="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-semibold text-center shadow-lg hover:shadow-sky-500/30 transition">
+          Download CV
+        </a>
+
+        <a href="#contact"
+          class="px-8 py-3 rounded-full border border-sky-500 text-sky-400 hover:bg-sky-500 hover:text-white font-semibold text-center transition">
+          Hire Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= PROFESSIONAL PROJECT SECTION ================= -->
+<section id="projects"
+  class="relative py-10 px-6 overflow-hidden bg-[#050816] ">
+
+  <!-- Background Glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+<!-- 
+      <p class="uppercase tracking-[6px] text-cyan-400 text-sm font-semibold mb-4">
+        MY CREATIVE WORK
+      </p>
+ -->
+      <h2 class="text-4xl md:text-4xl font-extrabold text-white leading-tight">
+
+        Featured
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+
+          Projects
+
+        </span>
+
+      </h2>
+
+      <p class="max-w-2xl mx-auto mt-5 text-gray-400 text-lg leading-relaxed">
+
+        Modern and interactive frontend projects with premium UI,
+        smooth animation and responsive design experience.
+
+      </p>
+
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+      <!-- PROJECT 1 -->
+      <div
+        class="group relative rounded-[30px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:border-cyan-400/40 transition duration-500"
+        data-aos="zoom-in">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+            class="h-56 w-full object-cover group-hover:scale-110 transition duration-700"
+            alt="Portfolio Website"
+          />
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-black/20 to-transparent"></div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-7">
+
+          <!-- Small Tag -->
+          <div
+            class="inline-block px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-sm mb-5">
+
+            Frontend Development
+
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-4">
+            My Portfolio Website
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed">
+
+            Modern personal portfolio website with glassmorphism design,
+            responsive layout and smooth animations.
+
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex items-center gap-4 mt-7">
+
+            <a
+              href="http://127.0.0.1:5500/index.html#home"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20">
+
+              Live Preview
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div
+        class="group relative rounded-[30px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:border-purple-400/40 transition duration-500"
+        data-aos="zoom-in"
+        data-aos-delay="200">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop"
+            class="h-56 w-full object-cover group-hover:scale-110 transition duration-700"
+            alt="E-Commerce UI"
+          />
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-black/20 to-transparent"></div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-7">
+
+          <!-- Small Tag -->
+          <div
+            class="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-400/20 text-purple-300 text-sm mb-5">
+
+            UI / UX Design
+
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-4">
+            E-Commerce UI
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed">
+
+            Stylish e-commerce website interface with interactive product
+            cards and modern responsive design.
+
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex items-center gap-4 mt-7">
+
+            <button
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-purple-500/20">
+
+              Live Preview
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div
+        class="group relative rounded-[30px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:border-pink-400/40 transition duration-500"
+        data-aos="zoom-in"
+        data-aos-delay="400">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+            class="h-56 w-full object-cover group-hover:scale-110 transition duration-700"
+            alt="Dashboard Design"
+          />
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-black/20 to-transparent"></div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-7">
+
+          <!-- Small Tag -->
+          <div
+            class="inline-block px-4 py-1 rounded-full bg-pink-500/10 border border-pink-400/20 text-pink-300 text-sm mb-5">
+
+            Dashboard Design
+
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-4">
+            Dashboard UI
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed">
+
+            Professional admin dashboard with analytics cards,
+            charts and smooth interactive components.
+
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex items-center gap-4 mt-7">
+
+            <button
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-red-500 px-6 py-3 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-pink-500/20">
+
+              Live Preview
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOOLS SECTION -->
+    <div class="mt-23 text-center" data-aos="fade-up">
+
+      <h3 class="text-2xl font-bold mb-7">
+
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+
+          Tools & Technologies
+
+        </span>
+
+      </h3>
+
+      <div class="flex flex-wrap justify-center gap-5">
+
+        <!-- TOOL -->
+        <div
+          class="px-6 py-3 rounded-2xl bg-orange-500/10 border border-orange-400/20 text-orange-300 font-medium hover:-translate-y-1 hover:scale-105 transition duration-300 shadow-lg shadow-orange-500/10">
+
+          <i class="fa-brands fa-html5 mr-2"></i>
+          HTML5
+
+        </div>
+
+        <!-- TOOL -->
+        <div
+          class="px-6 py-3 rounded-2xl bg-sky-500/10 border border-sky-400/20 text-sky-300 font-medium hover:-translate-y-1 hover:scale-105 transition duration-300 shadow-lg shadow-sky-500/10">
+
+          <i class="fa-brands fa-css3-alt mr-2"></i>
+          Tailwind CSS
+
+        </div>
+
+        <!-- TOOL -->
+        <div
+          class="px-6 py-3 rounded-2xl bg-yellow-500/10 border border-yellow-400/20 text-yellow-300 font-medium hover:-translate-y-1 hover:scale-105 transition duration-300 shadow-lg shadow-yellow-500/10">
+
+          <i class="fa-brands fa-js mr-2"></i>
+          JavaScript
+
+        </div>
+
+        <!-- TOOL -->
+        <div
+          class="px-6 py-3 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 font-medium hover:-translate-y-1 hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/10">
+
+          <i class="fa-brands fa-react mr-2"></i>
+          React JS
+
+        </div>
+
+        <!-- TOOL -->
+        <div
+          class="px-6 py-3 rounded-2xl bg-purple-500/10 border border-purple-400/20 text-purple-300 font-medium hover:-translate-y-1 hover:scale-105 transition duration-300 shadow-lg shadow-purple-500/10">
+
+          <i class="fa-solid fa-fire mr-2"></i>
+          Firebase
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= END PROJECT SECTION ================= -->
+<section id="skills"
+  class="relative py-10 px-6 overflow-hidden bg-[#050816] ">
+
+  <!-- Background Glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+
+      <h2 class="text-4xl md:text-4xl font-extrabold text-white leading-tight">
+
+       Experience
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+
+         & Skills
+
+        </span>
+
+      </h2>
+
+      <p class="max-w-2xl mx-auto mt-5 text-gray-400 text-lg leading-relaxed">
+
+         My technical expertise, frontend development journey and
+        creative design experience.
+
+      </p>
+
+    </div>
+
+      
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Skills -->
+        <div class="glass p-8 rounded-3xl"
+          data-aos="fade-right">
+
+          <h3 class="text-2xl font-bold mb-6">
+            Technical Skills
+          </h3>
+
+          <div class="space-y-6">
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>HTML</span>
+                <span>95%</span>
+              </div>
+
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div class="bg-sky-500 h-3 rounded-full w-[95%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>Tailwind CSS</span>
+                <span>90%</span>
+              </div>
+
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div class="bg-purple-500 h-3 rounded-full w-[90%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>JavaScript</span>
+                <span>85%</span>
+              </div>
+
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div class="bg-pink-500 h-3 rounded-full w-[85%]"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="glass p-8 rounded-3xl"
+          data-aos="fade-left">
+
+          <h3 class="text-2xl font-bold mb-6">
+            Experience
+          </h3>
+
+          <div class="space-y-6">
+
+            <div>
+              <h4 class="text-xl font-semibold">
+                Frontend Developer
+              </h4>
+
+              <p class="text-gray-400">
+                2024 - Present
+              </p>
+
+              <p class="mt-2 text-gray-300">
+                Building modern responsive websites and
+                interactive web applications.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold">
+                UI Designer
+              </h4>
+
+              <p class="text-gray-400">
+                2023 - 2024
+              </p>
+
+              <p class="mt-2 text-gray-300">
+                Designed creative user interfaces with modern
+                animation and smooth UX.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- Contact Section -->
+  <section id="contact"
+  class="relative py-10 px-6 overflow-hidden bg-[#050816] ">
+
+  <!-- Background Glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+
+      <h2 class="text-4xl md:text-4xl font-extrabold text-white leading-tight">
+
+       Contact
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+
+         Me
+
+        </span>
+
+      </h2>
+
+      <p class="max-w-2xl mx-auto mt-5 text-gray-400 text-lg leading-relaxed">
+
+          I am available for freelance work, collaborations and creative projects.
+  Let’s connect and build something modern, professional and impactful together.
+      </p>
+
+    </div>
+
+      
+
+
+
+
+    <!-- Main Container -->
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+
+      <!-- Left Side Contact Card -->
+<div
+  class="relative glass rounded-[30px] p-8 flex flex-col h-full"
+  data-aos="fade-right">
+
+  <!-- Glow Effects -->
+  <div class="absolute -top-16 -right-16 w-44 h-44 bg-sky-500/20 blur-3xl rounded-full"></div>
+
+  <div class="absolute -bottom-16 -left-16 w-44 h-44 bg-purple-500/20 blur-3xl rounded-full"></div>
+
+  <!-- Heading -->
+  <div class="relative z-10 mb-8">
+
+    <h3 class="text-3xl font-bold gradient-text mb-3">
+      Contact Information
+    </h3>
+
+    <p class="text-gray-400 leading-relaxed">
+      Feel free to reach out for collaboration,
+      projects or any creative work.
+    </p>
+
+  </div>
+
+  <!-- Contact Items -->
+  <div class="relative z-10 space-y-2">
+
+    <!-- Contact Items -->
+<div class="relative z-10 space-y-2">
+
+  <!-- Email -->
+  <div class="flex items-center gap-4">
+
+    <i class="fa-solid fa-envelope text-sky-400 text-xl"></i>
+
+    <div>
+      <h4 class="text-lg font-semibold">
+        Email
+      </h4>
+
+      <p class="text-gray-300">
+        meharunnahar2021@gmail.com
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Phone -->
+  <div class="flex items-center gap-4">
+
+    <i class="fa-solid fa-phone text-purple-400 text-xl"></i>
+
+    <div>
+      <h4 class="text-lg font-semibold">
+        Phone
+      </h4>
+
+      <p class="text-gray-300">
+        +8801854254244
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Location -->
+  <div class="flex items-center gap-4">
+
+    <i class="fa-solid fa-location-dot text-pink-400 text-xl"></i>
+
+    <div>
+      <h4 class="text-lg font-semibold">
+        Location
+      </h4>
+
+      <p class="text-gray-300">
+        Chattogram, Bangladesh
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+</div>
+
+      <!-- Right Side Form -->
+<form id="contact-form"
+  class="glass p-8 rounded-3xl flex flex-col gap-5 h-full"
+  data-aos="fade-left"
+data-aos-duration="1400"
+>
+
+ <!-- First Name + Last Name -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+  <!-- First Name -->
+  <div class="relative">
+    <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-sky-400"></i>
+
+    <input
+      type="text"
+      name="first_name"
+      placeholder="First Name"
+      required
+      class="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/80 border border-white/10 outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30 transition duration-300"
+    />
+  </div>
+
+  <!-- Last Name -->
+  <div class="relative">
+    <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-purple-400"></i>
+
+    <input
+      type="text"
+      name="last_name"
+      placeholder="Last Name"
+      required
+      class="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/80 border border-white/10 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition duration-300"
+    />
+  </div>
+
+</div>
+
+<!-- Email Address -->
+<div class="relative">
+
+  <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-sky-400"></i>
+
+  <input
+    type="email"
+    name="from_email"
+    placeholder="Email Address"
+    required
+    class="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/80 border border-white/10 outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30 transition duration-300"
+  />
+
+</div>
+
+<!-- Phone Number -->
+<div class="relative">
+
+  <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-pink-400"></i>
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    required
+    class="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/80 border border-white/10 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition duration-300"
+  />
+
+</div>
+
+  <!-- Interactive Button -->
+  <button
+    type="submit"
+    class="group relative w-full overflow-hidden bg-gradient-to-r from-sky-500 to-purple-500 py-4 rounded-xl text-lg font-semibold transition duration-500 hover:scale-[1.03] hover:shadow-2xl hover:shadow-sky-500/30">
+
+    <span class="relative z-10 flex items-center justify-center gap-2">
+
+      <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition duration-300"></i>
+
+      Send Message
+
+    </span>
+
+    <!-- Shine Effect -->
+    <span
+      class="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[120%] transition-all duration-700">
+    </span>
+
+  </button>
+
+</form>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- Footer -->
+  <footer class="py-8 text-center border-t border-gray-700">
+    <p class="text-gray-400">
+      © 2026 Your Portfolio | All Rights Reserved
+    </p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration:1200,
+      once:true
+    });
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("78-lTvh8VPQ5UdOcU");
+  })();
+</script>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_7cu206a",
+    "template_vr7jnhs",
+    this
+  ).then(
+    function() {
+      alert("Message sent successfully!");
+    },
+    function(error) {
+      alert("Failed to send message!");
+      console.log(error);
+    }
+  );
+});
+</script>
+
+</body>
+</html>
